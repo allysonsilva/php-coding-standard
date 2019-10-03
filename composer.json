@@ -1,0 +1,50 @@
+{
+    "name": "allysonsilva/php-coding-standard",
+    "type": "phpcodesniffer-standard",
+    "description": "Coding Standard for PHP_CodeSniffer.",
+    "keywords": [
+        "php",
+        "phpcs",
+        "coding",
+        "standard",
+        "style",
+        "sniffer"
+    ],
+    "homepage": "https://github.com/allysonsilva/php-coding-standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Allyson Silva",
+            "email": "allysonsilvaweb@gmail.com",
+            "homepage": "https://allyson.tech",
+            "role": "Lead Developer"
+        }
+    ],
+    "support": {
+        "email": "allysonsilvaweb@gmail.com",
+        "issues": "https://github.com/allysonsilva/php-coding-standard/issues",
+        "source": "https://github.com/allysonsilva/php-coding-standard"
+    },
+    "require": {
+        "php": "^7.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "object-calisthenics/phpcs-calisthenics-rules": "^3.5.1",
+        "slevomat/coding-standard": "^5.0",
+        "squizlabs/php_codesniffer": "^3.5.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "check-style": "./vendor/bin/phpcs --standard=AppStandard",
+        "fix-style": "./vendor/bin/phpcbf --standard=AppStandard"
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests.",
+        "check-style": "Run style checks (only dry run - no fixing!).",
+        "fix-style": "Run style checks and fix violations."
+    }
+}

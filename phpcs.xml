@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset
+    name="PHPCS Coding Standards"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"
+>
+    <description>The coding standard for AppStandard itself.</description>
+
+    <!-- Files -->
+    <file>app</file>
+    <file>config</file>
+    <file>resources/lang</file>
+    <file>routes</file>
+    <file>tests</file>
+
+    <!-- Arguments -->
+    <arg name="basepath" value="."/>
+    <arg name="tab-width" value="4"/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+    <arg name="encoding" value="utf-8"/>
+    <arg name="parallel" value="50"/>
+    <arg name="report" value="full"/>
+    <arg name="report-width" value="auto"/>
+    <arg name="ignore" value="server.php,resources/views,*blade.php*"/>
+
+    <!-- -n    Do not print warnings (shortcut for -\-warning-severity=0) -->
+    <!-- -p    Show progress of the run @see https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage#printing-progress-information -->
+    <!-- -s    Show sniff codes in all reports -->
+    <arg value="nps"/>
+
+    <!-- Excludes -->
+    <exclude-pattern>*/.github/*</exclude-pattern>
+    <exclude-pattern>public</exclude-pattern>
+    <exclude-pattern>bootstrap</exclude-pattern>
+    <exclude-pattern>storage</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <!-- Rules -->
+    <rule ref="AppStandard"/>
+</ruleset>
